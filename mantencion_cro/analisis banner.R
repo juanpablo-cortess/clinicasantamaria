@@ -52,7 +52,7 @@ clicks_totales_diarios<-banners %>% group_by(date) %>% summarize(clicks_totales 
 banners_marzo<-filter(banners,date>='2020-03-01' & totalEvents>50)
 
 #banners marzo
-ggplot(banners_marzo,aes(date,totalEvents,))+ geom_line(aes(colour=factor(eventLabel)))+theme(legend.position = 'bottom')+labs(subtitle="Banners con mas de 50 clicks desde 01/02 al 21/03", 
+ggplot(banners_marzo,aes(date,totalEvents))+ geom_line(aes(colour=factor(eventLabel)))+theme(legend.position = 'bottom')+labs(subtitle="Banners con mas de 50 clicks desde 01/02 al 21/03", 
                                                                                                                                y="clicks totales banners", 
                                                                                                                                x="fecha", 
                                                                                                                                title="Clicks totales Banner por dia Marzo", 
